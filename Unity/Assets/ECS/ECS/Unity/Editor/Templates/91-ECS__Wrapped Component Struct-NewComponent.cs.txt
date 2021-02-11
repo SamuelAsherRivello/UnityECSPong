@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace ECS {
+    // structs are way faster than class 
+    // use this when ever you can it has an important impact on the computation speedup
+    [Serializable]
+    public struct #SCRIPTNAME#Component : IComponent {
+
+    }
+    
+    // this wraps the component for Scene & Prefab workflow    
+    [DisallowMultipleComponent]
+    public class #SCRIPTNAME# : ComponentDataWrapper<#SCRIPTNAME#Component>{ }
+}

@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace ECS {
+    // classes are slower than structs 
+    // its not recommended to use this because it has an important impact on the computation speed
+    // use this class if you deal with unity Monobehaviour scripts like Transform
+    [Serializable]
+    public class #SCRIPTNAME#Component : IComponent, ICloneable {
+
+        public object Clone() {
+            return MemberwiseClone();
+        }
+    }
+    
+    // this wraps the component for Scene & Prefab workflow    
+    [DisallowMultipleComponent]
+    public class #SCRIPTNAME# : ComponentWrapper<#SCRIPTNAME#Component>{ }
+}

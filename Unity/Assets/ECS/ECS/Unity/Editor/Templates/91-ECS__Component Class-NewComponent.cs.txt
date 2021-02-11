@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace ECS {
+    // classes are slower than structs 
+    // it's not recommended to use this because it has an important impact on the computation speed
+    // use this class if you deal with unity Monobehaviour scripts like Transform
+    [Serializable]
+    public class #SCRIPTNAME# : IComponent, ICloneable {
+
+    }
+}
